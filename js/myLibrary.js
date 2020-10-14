@@ -26,7 +26,7 @@ function yoliFilter(array, callback) {
         }
         return newArray;
     }
-    console.log(myFilter(array, element => element > 9));
+    console.log(yoliFilter(array, element => element > 9));
 
    
 
@@ -52,7 +52,7 @@ function yoliFind(array, callback) {
         }
     }
     
-    console.log(yoliFind(array, element => element > 12)); 
+    console.log(yoliFind(array, element => element > 5)); 
 
 
  //Creando FindIndex //
@@ -66,7 +66,7 @@ function yoliFind(array, callback) {
        return -1;
     }
     
-    console.log(myFindIndex(array, element => element > 12))
+    console.log(yoliFindIndex(array, element => element > 6))
 
  //Creando Contains //
 
@@ -86,7 +86,7 @@ Array.prototype.yoliWithout = function (...cut){
     let copyArray = this.slice();
 
     cut.forEach(element => {
-        while(copyarray.indexOf(element)!= -1){
+        while(copyArray.indexOf(element)!= -1){
         copyArray.splice(copyArray.indexOf(element), 1)
         }
     })
@@ -94,7 +94,7 @@ Array.prototype.yoliWithout = function (...cut){
 }
 
 let yoliWithoutValue = array.yoliWithout(13,9,8,2);
-console.log(`arreglo original: [${array}]. Arreglo yoliWithout: [${yoliWithoutValue|}]`); 
+console.log(`arreglo original: [${array}]. Arreglo yoliWithout: [${yoliWithoutValue}]`); 
 
 
 //Creando Pluck //
@@ -109,4 +109,4 @@ function yoliPluck(array, propiedad) {
       return newArray;
     }
     
-    console.log(myPluck(objects,'edad')); 
+    console.log(yoliPluck(objects,'age')); 
